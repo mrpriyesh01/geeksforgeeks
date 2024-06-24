@@ -1,0 +1,7 @@
+class Solution:
+  
+    def missingNumber(self, n, arr):
+        sum=0
+        sum3=((n*(n+1))//2)
+        sum4=sum(arr)
+        return sum3-sum4
