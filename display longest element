@@ -1,0 +1,11 @@
+from typing import List
+
+class Solution:
+    def longest(self, n: int, names: List[str]) -> str:
+        long_name = names[0]  # Initialize long_name with the first name
+        
+        for name in names:
+            if len(name) > len(long_name):
+                long_name = name
+        
+        return long_name
