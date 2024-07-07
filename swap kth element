@@ -1,0 +1,8 @@
+from typing import List
+
+
+class Solution:
+    def swapKth(self, n : int, k : int, arr : List[int]) -> None:
+        arr[k-1],arr[n-k]=arr[n-k],arr[k-1]
+        return arr 
+        
