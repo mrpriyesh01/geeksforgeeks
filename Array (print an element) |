@@ -1,0 +1,15 @@
+n = 5
+key = 2
+arr = {10, 20, 30, 40, 50}
+Output: 30
+Explanation: The value of arr[2] is 30 .
+
+
+code=
+from typing import List
+class Solution:
+    def findElementAtIndex(self, n : int, key : int, arr : List[int]) -> int:
+        for i in range(n):  
+            if arr[i] == key: 
+                return i  
+        return -1 
