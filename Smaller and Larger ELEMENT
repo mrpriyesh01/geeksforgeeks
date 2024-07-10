@@ -1,0 +1,27 @@
+
+QUESTION-
+Given a sorted array Arr of size N and a value X, find the number of array elements less than or equal to X and elements more than or equal to X. 
+Input:
+N = 7, X = 0
+Arr[] = {1, 2, 8, 10, 11, 12, 19}
+Output: 0 7
+Explanation: There are no elements less or
+equal to 0 and 7 elements greater or equal
+to 0.
+
+CODE=
+#User function Template for python3
+class Solution:
+
+	def getMoreAndLess(self,arr, n, x):
+	    less = 0
+        greater = 0
+        for i in range(n):
+            if arr[i] <= x:
+                less += 1
+            if arr[i] >= x:
+                greater += 1
+        return (less, greater)
+
+
+	   
