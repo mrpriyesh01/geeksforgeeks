@@ -1,0 +1,15 @@
+Given a list of characters, merge all of them into a string.
+Input:
+N = 13
+Char array = g e e k s f o r g e e k s
+Output: geeksforgeeks 
+Explanation: combined all the characters
+to form a single string.
+
+code=#User function Template for python3
+
+class Solution:
+    def chartostr(self, arr,N):
+        return ''.join(arr)
+        
+        
