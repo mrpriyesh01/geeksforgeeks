@@ -1,0 +1,12 @@
+Given a string str containing only lowercase letters, generate a string with the same letters, but in uppercase.
+Example 1:
+Input:
+str = "geeks"
+Output: GEEKS
+
+code=
+#User function Template for python3
+class Solution:
+    def to_upper(self, str):
+        return str.upper()
+  
