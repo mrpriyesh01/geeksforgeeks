@@ -1,0 +1,17 @@
+Input:
+S = Geeks
+Output:
+Geeks
+.eeks
+..eks
+...ks
+....s
+
+code=
+class Solution:
+    def triDownwards(self, S):
+        ans = []
+        for i in range(len(S)):
+            ans.append('.'*i + S[i:])
+        return "".join(ans)
+        
