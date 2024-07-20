@@ -1,0 +1,30 @@
+Given a string S which consists of alphabets , numbers and special characters. 
+You need to write a program to split the strings in three different strings S1, S2 and S3
+such that the string S1 will contain all the alphabets present in S , 
+the string S2 will contain all the numbers present in S and S3 will contain all special characters present in S.
+The strings S1, S2 and S3 should have characters in same order as they appear in input.
+Input:
+S = geeks01for02geeks03!!!
+Output:
+geeksforgeeks
+010203
+!!!
+Explanation: The output shows S1, S2 and S3. 
+
+class Solution:
+    def splitString(ob, S):
+        s1="" # Counter for letters
+        s2=""   # Counter for digits
+        s3=""   # Counter for other characters
+        
+        for char in S:
+            if char.isalpha():
+                s1 += char  # Append to S1 if character is an alphabet
+            elif char.isdigit():
+                s2 += char  # Append to S2 if character is a digit
+            else:
+                s3 += char  # Append to S3 if character is a special character
+        
+        # Return the three strings
+        return s1, s2, s3
+        
