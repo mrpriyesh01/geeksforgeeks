@@ -1,0 +1,17 @@
+#User function Template for python3
+#User function Template for python3
+
+class Solution:
+    def get_min_max(self, arr):
+        largest=arr[0]
+        smallest=arr[0]
+        for i in range(len(arr)):
+            if arr[i]>largest:
+                largest=arr[i]
+        for i in range(len(arr)):
+            if arr[i]<smallest:
+                smallest=arr[i]
+                
+        return smallest,largest
+        
+    
