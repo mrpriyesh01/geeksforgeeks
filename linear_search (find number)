@@ -1,0 +1,9 @@
+def linear_search(arr, target):
+    # Loop through each item in the list
+    for i in range(len(arr)):
+        # Check if the current item is the target
+        if arr[i] == target:
+            return i  # Return the index if found
+    return -1  # Return -1 if not found
+
+
