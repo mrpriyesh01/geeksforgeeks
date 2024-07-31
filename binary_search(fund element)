@@ -1,0 +1,23 @@
+def binary_search(arr, target):
+    # Define the initial left and right pointers
+    left = 0
+    right = len(arr) - 1
+
+    # Loop until the pointers meet
+    while left <= right:
+        # Find the middle index
+        mid = (left + right) // 2
+
+        # Check if the middle item is the target
+        if arr[mid] == target:
+            return mid  # Return the index if found
+        # If the target is smaller, search the left half
+        elif arr[mid] > target:
+            right = mid - 1
+        # If the target is larger, search the right half
+        else:
+            left = mid + 1
+
+    return -1  # Return -1 if not found
+
+
