@@ -1,0 +1,43 @@
+Uncommon characters
+Difficulty: BasicAccuracy: 38.13%Submissions: 87K+Points: 1
+Given two strings A and B consisting of lowercase english characters. Find the characters that are not common in the two strings. 
+
+Note :- Return the string in sorted order.
+
+Example 1:
+
+Input:
+A = geeksforgeeks
+B = geeksquiz
+Output: fioqruz
+Explanation: 
+The characters 'f', 'i', 'o', 'q', 'r', 'u','z' 
+are either present in A or B, but not in both.
+
+code=
+
+class Solution:
+    def UncommonChars(self, A, B):
+        set_A = set(A)
+        set_B = set(B)
+        uncommon_chars = []
+
+        # Characters in A but not in B
+        for char in set_A:
+            if char not in set_B:
+                uncommon_chars.append(char)
+
+        # Characters in B but not in A
+        for char in set_B:
+            if char not in set_A:
+                uncommon_chars.append(char)
+
+        # Sort the list of uncommon characters
+        uncommon_chars.sort()
+
+        if len(uncommon_chars) == 0:
+            return -1
+        else:
+            return ''.join(uncommon_chars)
+
+        
