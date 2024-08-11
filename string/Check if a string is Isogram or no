@@ -1,0 +1,33 @@
+Given a string S of lowercase alphabets, check if it is isogram or not.
+An Isogram is a string in which no letter occurs more than once.
+
+Example 1:
+Input:
+S = machine
+Output: 1
+Explanation: machine is an isogram
+as no letter has appeared twice. Hence
+we print 1.
+Example 2:
+
+Input:
+S = geeks
+Output: 0
+Explanation: geeks is not an isogram
+as 'e' appears twice. Hence we print 0.
+
+code=
+class Solution:
+    def isIsogram(self, s):
+        # Create an empty set to store unique characters
+        seen_chars = set()
+        # Iterate through each character in the string
+        for char in s:
+            # Check if the character is already in the set
+            if char in seen_chars:
+                return False  # If it is, the string is not an isogram
+            # Add the character to the set
+            seen_chars.add(char)
+        
+        # If no duplicates were found, return True
+        return True
