@@ -1,0 +1,33 @@
+Given a string str containing alphanumeric characters. The task is to calculate the sum of all the numbers present in the string.
+
+Example 1:
+Input:
+str = 1abc23
+Output: 24
+Explanation: 1 and 23 are numbers in the
+string which is added to get the sum as
+24.
+
+code=
+class Solution:
+    
+    #Function to calculate sum of all numbers present in a string.
+    def findSum(self,s):
+        num = ''  # This will store each number as we find it
+        total_sum = 0  # This will keep the sum of all numbers
+        # Go through each character in the string
+        for char in s:
+            if char.isdigit():  # Check if the character is a number
+                num += char  # If it is, add it to the current number we're building
+            else:
+                # If we hit a non-number and we have a number stored
+                if num:
+                    total_sum += int(num)  # Add the number to the total sum
+                    num = ''  # Reset num to start a new number
+
+        # After the loop, if there's still a number in num, add it to total_sum
+        if num:
+            total_sum += int(num)
+        
+        return total_sum
+        
