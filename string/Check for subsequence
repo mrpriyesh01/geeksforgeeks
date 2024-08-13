@@ -1,0 +1,31 @@
+Given two strings A and B, find if A is a subsequence of B.
+
+Example 1:
+
+Input:
+A = AXY 
+B = YADXCP
+Output: 0 
+Explanation: A is not a subsequence of B
+as 'Y' appears before 'A'.
+
+
+code=
+class Solution:
+    def isSubSequence(self, A, B):
+        m,n=len(A),len(B)
+        j=0
+        for i in range(n):
+            if j<m and A[j]==B[i]:
+                j+=1       
+        return j==m
+
+another method
+class solution:
+def isSubsequence(Self,A.B):
+     m,n=len(A),len(B)
+     j=0     #pointer of a
+     for i in range(n):
+         if j<m and a[j]==b[i]:
+             j+=1
+      return j==m
