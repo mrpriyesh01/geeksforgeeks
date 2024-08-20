@@ -1,0 +1,25 @@
+Sort the string in descending order
+Difficulty: BasicAccuracy: 47.71%Submissions: 21K+Points: 1
+Given a string str containing only lower case alphabets, the task is to sort it in lexicographically-descending order.
+
+Example 1:
+
+Input: str = "geeks"
+Output: "skgee"
+Explanation: It's the lexicographically-
+descending order.
+Example 2:
+
+Input: str = "for"
+Output: "rof"
+Explanation: "rof" is in
+lexicographically-descending order.
+
+code=
+class Solution:
+    def ReverseSort(self, string): 
+        # Sort the string in ascending order first
+        sorted_str = sorted(string)  # This will sort in ascending order (a to z)
+        # Reverse the sorted list of characters
+        reversed_str = ''.join(reversed(sorted_str))  # Reverse the sorted list
+        return reversed_str
