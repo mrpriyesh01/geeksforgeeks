@@ -1,0 +1,45 @@
+Count the characters
+Difficulty: BasicAccuracy: 27.88%Submissions: 28K+Points: 1
+Given a string S. Count the characters that have ‘N’ number of occurrences. If a character appears consecutively it is counted as 1 occurrence.
+
+Example 1:
+Input:
+S = "abc", N = 1
+Output: 3
+Explanation: 'a', 'b' and 'c' all have 
+1 occurrence.
+
+‹Example 2:
+
+Input: 
+S = "geeksforgeeks", N = 2
+Output: 4
+Explanation: 'g', 'e', 'k' and 's' have
+2 occurrences.
+
+
+code=
+class Solution:
+    def getCount (self,S, N):
+        # your code here
+        count = 0
+        D = {}
+        for i in range(len(S)-1):
+            if S[i] != S[i+1] :
+                if S[i] not in D:
+                    D[S[i]] = 1
+                else:
+                    D[S[i]]  += 1
+        
+        if S[-1] not in D :
+            D[S[-1]] = 1
+        else:
+            D[S[-1]] += 1
+            
+        for i ,j in D.items():
+            if j == N :
+                count += 1
+                
+        return count
+    
+        
