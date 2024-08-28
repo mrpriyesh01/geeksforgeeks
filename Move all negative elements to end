@@ -1,0 +1,37 @@
+Given an unsorted array arr[ ] having both negative and positive integers. 
+The task is to place all negative elements at the end of the array without changing the order of positive elements and negative elements.
+
+Note: Don't return any array, just in-place on the array.
+Examples:
+
+Input : arr[] = [1, -1, 3, 2, -7, -5, 11, 6 ]
+Output : [1, 3, 2, 11, 6, -1, -7, -5]
+Explanation: By doing operations we separated the integers without changing the order.
+Input : arr[] = [-5, 7, -3, -4, 9, 10, -1, 11]
+Output : [7, 9, 10, 11, -5, -3, -4, -1]
+Expected Time Complexity: O(n)
+Expected Auxiliary Space: O(n)
+
+
+code=
+class Solution:
+    def segregateElements(self, arr):
+        # Lists to store positive and negative elements
+        positive_elements = []
+        negative_elements = []
+        
+        # Separate positive and negative elements
+        for num in arr:
+            if num >= 0:
+                positive_elements.append(num)
+            else:
+                negative_elements.append(num)
+        
+        # Combine positive elements with negative elements
+        result = positive_elements + negative_elements
+        
+        # Update the original array with the result
+        for i in range(len(arr)):
+            arr[i] = result[i]
+        
+        return arr
