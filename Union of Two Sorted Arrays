@@ -1,0 +1,48 @@
+Given two sorted arrays of size n and m respectively, find their union. 
+The Union of two arrays can be defined as the common and distinct elements in the two arrays. Return the elements in sorted order.
+
+Example 1:
+Input: 
+n = 5, arr1[] = {1, 2, 3, 4, 5}  
+m = 5, arr2 [] = {1, 2, 3, 6, 7}
+Output: 
+1 2 3 4 5 6 7
+Explanation: 
+Distinct elements including both the arrays are: 1 2 3 4 5 6 7.
+Example 2:
+
+Input: 
+n = 5, arr1[] = {2, 2, 3, 4, 5}  
+m = 5, arr2[] = {1, 1, 2, 3, 4}
+Output: 
+1 2 3 4 5
+Explanation: 
+Distinct elements including both the arrays are: 1 2 3 4 5.
+Example 3:
+
+Input:
+n = 5, arr1[] = {1, 1, 1, 1, 1}
+m = 5, arr2[] = {2, 2, 2, 2, 2}
+Output: 
+1 2
+Explanation: 
+
+code-=
+
+class Solution:
+    # Function to return a list containing the union of the two arrays.
+    def findUnion(self, arr1, arr2, n, m):
+        '''
+        :param arr1: given sorted array arr1
+        :param n: size of sorted array arr1
+        :param arr2: given sorted array arr2
+        :param m: size of sorted array arr2
+        :return: The union of both arrays as a sorted list
+        '''
+        combinedoftwoarray = arr1 + arr2
+        uniqueeele = set(combinedoftwoarray)
+        sorted_union = sorted(uniqueeele)
+        
+        return sorted_union
+
+Distinct elements including both the arrays are: 1 2.
