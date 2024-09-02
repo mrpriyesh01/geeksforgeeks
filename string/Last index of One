@@ -1,0 +1,28 @@
+Given a string s consisting of only '0's and '1's,  find the last index of the '1' present.
+
+Note: If '1' is not present, return "-1"
+
+Examples:
+
+Input: s = 00001
+Output: 4
+Explanation: Last index of  1 in given string is 4.
+Input: s = 0
+Output: -1
+Explanation: Since, 1 is not present, so output is -1.
+Expected Time Complexity: O(n)
+Expected Auxillary Space: O(1)
+
+Constraints:
+1 <= |s| <= 106
+
+code=
+class Solution:
+    def lastIndex(self, s: str) -> int:
+        # Loop over the string in reverse to find the last '1'
+        for i in range(len(s) - 1, -1, -1):
+            if s[i] == '1':
+                return i
+        # If no '1' is found, return -1
+        return -1
+
