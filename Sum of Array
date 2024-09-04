@@ -1,0 +1,47 @@
+You are given an integer array arr[]. The task is to find the sum of it.
+
+Examples:
+
+Input: arr[] = [1, 2, 3, 4]
+Output: 10
+Explanation: 1 + 2 + 3 + 4 = 10.
+Input: arr[] = [1, 3, 3]
+Output: 7
+Explanation: 1 + 3 + 3 = 7.
+Expected Time Complexity: O(n)
+Expected Auxiliary Space: O(1)
+
+Constraints:
+1 <= arr.size <= 105
+1 <= arr[i] <= 104
+
+EXPLANATION=
+Here’s a very simple explanation of the code that you can use:
+Function _sum:
+It takes an array (arr) as input.
+We start with a sum variable set to 0.
+We loop through the array, adding each number to the sum.
+After the loop, we return the total sum.
+
+
+CODE==
+#User function Template for python3
+class Solution:
+    def _sum(self, arr):
+        sum = 0  # Initialize the sum variable
+        for i in range(len(arr)):  # Loop through the entire array
+            sum = sum + arr[i]
+        return sum  # Return the sum after the loop completes
+#{ 
+ # Driver Code Starts
+# Driver code
+if __name__ == "__main__":
+    tc = int(input())
+    while tc > 0:
+        arr = list(map(int, input().strip().split()))
+        ob = Solution()
+        ans = ob._sum(arr)
+        print(ans)
+        tc = tc - 1
+
+# } Driver Code Ends
