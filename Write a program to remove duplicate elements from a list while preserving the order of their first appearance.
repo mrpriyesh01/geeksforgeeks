@@ -1,0 +1,10 @@
+code:
+orginal_no=[1,2,2,3,4,5]
+seen=set()
+unique_number=[]
+for num in orginal_no:
+    if num in seen:
+       unique_number.append()
+    else:
+       seen.add()
+print(unique_number)
