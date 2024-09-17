@@ -1,0 +1,28 @@
+Array Subset
+code=#User function Template for python3
+
+def isSubset(a1, a2, n, m):
+    # Create dictionaries to store counts of elements
+    count_a1 = {}
+    count_a2 = {}
+
+    # Count occurrences of each element in a1
+    for item in a1:
+        if item in count_a1:
+            count_a1[item] += 1
+        else:
+            count_a1[item] = 1
+
+    # Count occurrences of each element in a2
+    for item in a2:
+        if item in count_a2:
+            count_a2[item] += 1
+        else:
+            count_a2[item] = 1
+
+    # Check if a1 contains all elements of a2 with required occurrences
+    for item in count_a2:
+        if count_a2[item] > count_a1.get(item, 0):
+            return "No"
+
+    return "Yes"
