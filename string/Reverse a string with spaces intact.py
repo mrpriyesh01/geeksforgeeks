@@ -14,3 +14,24 @@ S = "geeksforgeeks"
 Output: skeegrofskeeg
 Explanation: No space present, hence the
 entire string is reversed.
+
+
+code=
+
+class Solution:
+    def reverseWithSpacesIntact(self, s):
+        chars = list(s)  
+        left, right = 0, len(s) - 1  
+        
+        while left < right:
+            if chars[left] == ' ':  
+                left += 1
+            elif chars[right] == ' ':  
+                right -= 1
+            else:
+                chars[left], chars[right] = chars[right], chars[left]
+                left += 1  
+                right -= 1 
+        
+        return ''.join(chars)  
+
